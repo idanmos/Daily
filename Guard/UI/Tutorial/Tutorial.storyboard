@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGd-UI-nxK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial Welcome View Controller-->
+        <scene sceneID="k9Y-SL-dD3">
+            <objects>
+                <viewController storyboardIdentifier="TutorialWelcomeViewController" id="fLS-Gg-SdS" customClass="TutorialWelcomeViewController" customModule="Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKq-bx-SOR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4Z-8w-Kli">
+                                <rect key="frame" x="20" y="144" width="161.5" height="57.5"/>
+                                <string key="text">Welcome to the
+Guard app</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-TT-iJ0">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="noc-DB-Lxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6st-ak-773" kind="show" id="BZW-zK-4Mn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Guard app helps you keep track of daily activities and places you have visited." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-uW-GPs">
+                                <rect key="frame" x="20" y="241.5" width="339" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ssa-VY-Oys"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ipY-TT-iJ0" firstAttribute="bottom" secondItem="ssa-VY-Oys" secondAttribute="bottom" id="9sj-FF-CA6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zsL-uW-GPs" secondAttribute="trailing" constant="20" id="GEi-Tw-bQT"/>
+                            <constraint firstItem="zsL-uW-GPs" firstAttribute="leading" secondItem="ssa-VY-Oys" secondAttribute="leading" constant="20" id="POA-bN-F2k"/>
+                            <constraint firstItem="H4Z-8w-Kli" firstAttribute="top" secondItem="ssa-VY-Oys" secondAttribute="top" constant="100" id="Rt3-r1-OFZ"/>
+                            <constraint firstItem="H4Z-8w-Kli" firstAttribute="leading" secondItem="ssa-VY-Oys" secondAttribute="leading" constant="20" id="cCi-T9-I0y"/>
+                            <constraint firstItem="ssa-VY-Oys" firstAttribute="trailing" secondItem="ipY-TT-iJ0" secondAttribute="trailing" constant="20" id="iRz-VF-FRO"/>
+                            <constraint firstItem="ssa-VY-Oys" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H4Z-8w-Kli" secondAttribute="trailing" constant="20" id="rZ3-ko-QIZ"/>
+                            <constraint firstItem="zsL-uW-GPs" firstAttribute="top" secondItem="H4Z-8w-Kli" secondAttribute="bottom" constant="40" id="vKQ-Lr-16O"/>
+                            <constraint firstItem="ipY-TT-iJ0" firstAttribute="leading" secondItem="ssa-VY-Oys" secondAttribute="leading" constant="20" id="xhr-R0-u7u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3gd-Rb-WNx"/>
+                    <connections>
+                        <outlet property="requestPermissionButton" destination="ipY-TT-iJ0" id="pPb-Sg-XMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tU1-BC-dyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466.6666666666667" y="150.66964285714286"/>
+        </scene>
+        <!--Tutorial Permissions View Controller-->
+        <scene sceneID="j5c-Mt-k4a">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPermissionsViewController" id="6st-ak-773" customClass="TutorialPermissionsViewController" customModule="Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwy-bb-He1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Permissions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6b-Z1-qaX">
+                                <rect key="frame" x="20" y="144" width="172.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWi-NL-Zcb">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8VN-3z-vNX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wFu-8f-lMd" kind="show" id="fzn-fK-n8V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Guard app needs permissions, let's review them." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMD-rq-cCW">
+                                <rect key="frame" x="20" y="213" width="305.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The information is stored only locally on the device and is not sent anywhere." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9I-LI-Kkm">
+                                <rect key="frame" x="20" y="274" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LHB-XR-nBE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bWi-NL-Zcb" firstAttribute="bottom" secondItem="LHB-XR-nBE" secondAttribute="bottom" id="0uU-l4-B2U"/>
+                            <constraint firstItem="w6b-Z1-qaX" firstAttribute="top" secondItem="LHB-XR-nBE" secondAttribute="top" constant="100" id="ATP-dv-lfz"/>
+                            <constraint firstItem="TMD-rq-cCW" firstAttribute="top" secondItem="w6b-Z1-qaX" secondAttribute="bottom" constant="40" id="DA9-8t-NeK"/>
+                            <constraint firstItem="bWi-NL-Zcb" firstAttribute="leading" secondItem="LHB-XR-nBE" secondAttribute="leading" constant="20" id="KYw-AT-0bY"/>
+                            <constraint firstItem="LHB-XR-nBE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w6b-Z1-qaX" secondAttribute="trailing" constant="20" id="WG1-t7-1P6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U9I-LI-Kkm" secondAttribute="trailing" constant="20" id="aKM-hI-w3B"/>
+                            <constraint firstItem="U9I-LI-Kkm" firstAttribute="top" secondItem="TMD-rq-cCW" secondAttribute="bottom" constant="20" id="bA8-JB-rmL"/>
+                            <constraint firstItem="U9I-LI-Kkm" firstAttribute="leading" secondItem="LHB-XR-nBE" secondAttribute="leading" constant="20" id="cmX-Vw-hgx"/>
+                            <constraint firstItem="TMD-rq-cCW" firstAttribute="leading" secondItem="LHB-XR-nBE" secondAttribute="leading" constant="20" id="m5G-Kb-Sge"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TMD-rq-cCW" secondAttribute="trailing" constant="20" id="mwY-pO-8R8"/>
+                            <constraint firstItem="w6b-Z1-qaX" firstAttribute="leading" secondItem="LHB-XR-nBE" secondAttribute="leading" constant="20" id="oK2-dJ-RgH"/>
+                            <constraint firstItem="LHB-XR-nBE" firstAttribute="trailing" secondItem="bWi-NL-Zcb" secondAttribute="trailing" constant="20" id="yhT-QH-Tys"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JqC-cO-1eE"/>
+                    <connections>
+                        <outlet property="requestPermissionButton" destination="bWi-NL-Zcb" id="c0I-tW-CJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTC-BU-GEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2323.1884057971015" y="150.66964285714286"/>
+        </scene>
+        <!--Motion Permission View Controller-->
+        <scene sceneID="LX5-HE-I4k">
+            <objects>
+                <viewController storyboardIdentifier="MotionPermissionViewController" id="wFu-8f-lMd" customClass="MotionPermissionViewController" customModule="Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emz-sT-qDr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2N-7n-kf2">
+                                <rect key="frame" x="20" y="144" width="72.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x41-Vg-PcO">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZnF-hy-cUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Request permission">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressRequestPermissions:" destination="wFu-8f-lMd" eventType="touchUpInside" id="9SC-uU-i8T"/>
+                                    <segue destination="Ghp-t9-IoX" kind="show" id="HWC-rx-B8r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a follow-up of daily activities such as: walking, running, cycling, etc." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL3-jU-thL">
+                                <rect key="frame" x="20" y="213" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RgR-Y3-FDk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F2N-7n-kf2" firstAttribute="top" secondItem="RgR-Y3-FDk" secondAttribute="top" constant="100" id="DfB-n5-1qp"/>
+                            <constraint firstItem="IL3-jU-thL" firstAttribute="leading" secondItem="RgR-Y3-FDk" secondAttribute="leading" constant="20" id="IWr-Pk-Bbg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IL3-jU-thL" secondAttribute="trailing" constant="20" id="IaA-Se-xkp"/>
+                            <constraint firstItem="x41-Vg-PcO" firstAttribute="leading" secondItem="RgR-Y3-FDk" secondAttribute="leading" constant="20" id="JSq-sg-y8R"/>
+                            <constraint firstItem="IL3-jU-thL" firstAttribute="top" secondItem="F2N-7n-kf2" secondAttribute="bottom" constant="40" id="K9x-Bf-I1u"/>
+                            <constraint firstItem="x41-Vg-PcO" firstAttribute="bottom" secondItem="RgR-Y3-FDk" secondAttribute="bottom" id="ddY-j5-Io2"/>
+                            <constraint firstItem="RgR-Y3-FDk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F2N-7n-kf2" secondAttribute="trailing" constant="20" id="ewz-6d-hTv"/>
+                            <constraint firstItem="F2N-7n-kf2" firstAttribute="leading" secondItem="RgR-Y3-FDk" secondAttribute="leading" constant="20" id="f9b-GS-pRs"/>
+                            <constraint firstItem="RgR-Y3-FDk" firstAttribute="trailing" secondItem="x41-Vg-PcO" secondAttribute="trailing" constant="20" id="oOy-fn-f0g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Bj-9F-KsV"/>
+                    <connections>
+                        <outlet property="requestPermissionButton" destination="x41-Vg-PcO" id="JQy-Oe-CqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nva-9l-CTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3226" y="151"/>
+        </scene>
+        <!--Location Permission View Controller-->
+        <scene sceneID="r8d-ai-Isn">
+            <objects>
+                <viewController storyboardIdentifier="LocationPermissionViewController" id="Ghp-t9-IoX" customClass="LocationPermissionViewController" customModule="Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a4f-EQ-sNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-Ww-wFU">
+                                <rect key="frame" x="20" y="144" width="89" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjd-M4-kPr">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BlE-mU-E1U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Request permission">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressRequestPermissions:" destination="Ghp-t9-IoX" eventType="touchUpInside" id="Wir-DM-BEF"/>
+                                    <segue destination="4Nn-hF-s5H" kind="show" id="HbA-sH-yVO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking places you've visited." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPi-dQ-f39">
+                                <rect key="frame" x="20" y="213" width="232.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the most power-efficient way of gathering location data." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6W-YI-9qB">
+                                <rect key="frame" x="20" y="253.5" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HiY-hZ-Uo1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HiY-hZ-Uo1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dEV-Ww-wFU" secondAttribute="trailing" constant="20" id="4nJ-OF-be1"/>
+                            <constraint firstItem="dEV-Ww-wFU" firstAttribute="top" secondItem="HiY-hZ-Uo1" secondAttribute="top" constant="100" id="50b-aW-gvd"/>
+                            <constraint firstItem="O6W-YI-9qB" firstAttribute="top" secondItem="nPi-dQ-f39" secondAttribute="bottom" constant="20" id="Hqd-iU-EVP"/>
+                            <constraint firstItem="nPi-dQ-f39" firstAttribute="top" secondItem="dEV-Ww-wFU" secondAttribute="bottom" constant="40" id="JeA-bf-hwC"/>
+                            <constraint firstItem="HiY-hZ-Uo1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O6W-YI-9qB" secondAttribute="trailing" constant="20" id="L3v-sS-wkU"/>
+                            <constraint firstItem="cjd-M4-kPr" firstAttribute="bottom" secondItem="HiY-hZ-Uo1" secondAttribute="bottom" id="MdR-mn-4Js"/>
+                            <constraint firstItem="HiY-hZ-Uo1" firstAttribute="trailing" secondItem="cjd-M4-kPr" secondAttribute="trailing" constant="20" id="XLF-DY-ERB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nPi-dQ-f39" secondAttribute="trailing" constant="20" id="aLI-vH-Uto"/>
+                            <constraint firstItem="dEV-Ww-wFU" firstAttribute="leading" secondItem="HiY-hZ-Uo1" secondAttribute="leading" constant="20" id="ffr-mY-5Zx"/>
+                            <constraint firstItem="nPi-dQ-f39" firstAttribute="leading" secondItem="HiY-hZ-Uo1" secondAttribute="leading" constant="20" id="rzO-O7-Kea"/>
+                            <constraint firstItem="cjd-M4-kPr" firstAttribute="leading" secondItem="HiY-hZ-Uo1" secondAttribute="leading" constant="20" id="uRq-eN-0FW"/>
+                            <constraint firstItem="O6W-YI-9qB" firstAttribute="leading" secondItem="HiY-hZ-Uo1" secondAttribute="leading" constant="20" id="vcn-p9-IOE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7lG-vO-HIS"/>
+                    <connections>
+                        <outlet property="requestPermissionButton" destination="cjd-M4-kPr" id="Ous-MN-HDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvo-S9-Mul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4016" y="151"/>
+        </scene>
+        <!--Health Permission View Controller-->
+        <scene sceneID="QgN-bd-GNW">
+            <objects>
+                <viewController storyboardIdentifier="HealthPermissionViewController" id="4Nn-hF-s5H" customClass="HealthPermissionViewController" customModule="Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHR-FQ-QmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy1-BN-Toe">
+                                <rect key="frame" x="20" y="144" width="68.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BI-an-OSe">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Bdu-od-OPm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Request permission">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressRequestPermissions:" destination="4Nn-hF-s5H" eventType="touchUpInside" id="QMm-iQ-rsY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your health data such as: training, training tracks, sleep, etc." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHt-o6-oIg">
+                                <rect key="frame" x="20" y="213" width="369" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7V2-Hx-Q80"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lHt-o6-oIg" firstAttribute="top" secondItem="Yy1-BN-Toe" secondAttribute="bottom" constant="40" id="7MT-dz-Dvk"/>
+                            <constraint firstItem="lHt-o6-oIg" firstAttribute="leading" secondItem="7V2-Hx-Q80" secondAttribute="leading" constant="20" id="LTX-h6-GCm"/>
+                            <constraint firstItem="7V2-Hx-Q80" firstAttribute="trailing" secondItem="0BI-an-OSe" secondAttribute="trailing" constant="20" id="PM1-Lo-awt"/>
+                            <constraint firstItem="Yy1-BN-Toe" firstAttribute="leading" secondItem="7V2-Hx-Q80" secondAttribute="leading" constant="20" id="UVC-4l-rzR"/>
+                            <constraint firstItem="Yy1-BN-Toe" firstAttribute="top" secondItem="7V2-Hx-Q80" secondAttribute="top" constant="100" id="XWC-NE-MLU"/>
+                            <constraint firstItem="0BI-an-OSe" firstAttribute="bottom" secondItem="7V2-Hx-Q80" secondAttribute="bottom" id="hbZ-nF-P7K"/>
+                            <constraint firstItem="0BI-an-OSe" firstAttribute="leading" secondItem="7V2-Hx-Q80" secondAttribute="leading" constant="20" id="rW6-hv-ZqF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lHt-o6-oIg" secondAttribute="trailing" constant="20" id="uth-qx-MzJ"/>
+                            <constraint firstItem="7V2-Hx-Q80" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yy1-BN-Toe" secondAttribute="trailing" constant="20" id="zwY-XJ-ca6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rMC-vP-J2i"/>
+                    <connections>
+                        <outlet property="requestPermissionButton" destination="0BI-an-OSe" id="6Ap-af-MYo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfd-fn-exK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4883" y="151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hSt-Eo-jrr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HGd-UI-nxK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1St-9V-Iy1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fLS-Gg-SdS" kind="relationship" relationship="rootViewController" id="9tv-n9-nLl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewg-8r-Q1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556.52173913043487" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

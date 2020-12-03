@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIDatePickerViewController" customModule="Daily" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="cii-RG-lcd" id="Wtx-9b-Hks"/>
+                <outlet property="view" destination="iN0-l3-epB" id="lsN-7a-reu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-Dl-GPS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="272.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a59-02-kPu">
+                    <rect key="frame" x="0.0" y="316.5" width="414" height="273"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtA-sT-YgT">
+                    <rect key="frame" x="0.0" y="589.5" width="414" height="272.5"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIj-Cr-UGW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="bmK-2h-9pA"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem systemItem="cancel" id="bpH-YI-CN7">
+                                    <connections>
+                                        <action selector="onCancel:" destination="-1" id="TlY-of-RQm"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="qne-Ed-4oU"/>
+                                <barButtonItem systemItem="done" id="mGo-kn-rOn">
+                                    <connections>
+                                        <action selector="onSave:" destination="-1" id="KV1-zK-qwx"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="cii-RG-lcd">
+                            <rect key="frame" x="0.0" y="44" width="414" height="228.5"/>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cii-RG-lcd" secondAttribute="trailing" id="J0D-R9-TgT"/>
+                        <constraint firstAttribute="bottom" secondItem="cii-RG-lcd" secondAttribute="bottom" id="NOL-x0-omG"/>
+                        <constraint firstAttribute="trailing" secondItem="sIj-Cr-UGW" secondAttribute="trailing" id="NuB-pv-geR"/>
+                        <constraint firstItem="cii-RG-lcd" firstAttribute="top" secondItem="sIj-Cr-UGW" secondAttribute="bottom" id="Z7y-KB-sg1"/>
+                        <constraint firstItem="sIj-Cr-UGW" firstAttribute="top" secondItem="LtA-sT-YgT" secondAttribute="top" id="g0M-Wu-eKK"/>
+                        <constraint firstItem="sIj-Cr-UGW" firstAttribute="leading" secondItem="LtA-sT-YgT" secondAttribute="leading" id="t0y-1Q-vgR"/>
+                        <constraint firstItem="cii-RG-lcd" firstAttribute="leading" secondItem="LtA-sT-YgT" secondAttribute="leading" id="zA1-KZ-wO8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LtA-sT-YgT" firstAttribute="top" secondItem="a59-02-kPu" secondAttribute="bottom" id="5ib-Pt-ToL"/>
+                <constraint firstItem="NhO-Dl-GPS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7pr-Pk-fOt"/>
+                <constraint firstItem="a59-02-kPu" firstAttribute="top" secondItem="NhO-Dl-GPS" secondAttribute="bottom" id="8tx-cC-00D"/>
+                <constraint firstItem="NhO-Dl-GPS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="HQK-Jf-wtq"/>
+                <constraint firstItem="a59-02-kPu" firstAttribute="height" secondItem="LtA-sT-YgT" secondAttribute="height" id="Iwa-lQ-wjI"/>
+                <constraint firstItem="NhO-Dl-GPS" firstAttribute="height" secondItem="a59-02-kPu" secondAttribute="height" id="LVW-Tt-Djp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LtA-sT-YgT" secondAttribute="trailing" id="P4a-4H-5AB"/>
+                <constraint firstItem="a59-02-kPu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fr2-Jh-vLK"/>
+                <constraint firstItem="LtA-sT-YgT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mSB-LK-a6L"/>
+                <constraint firstItem="NhO-Dl-GPS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qkl-kR-vpE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LtA-sT-YgT" secondAttribute="bottom" id="vbL-kZ-n3M"/>
+                <constraint firstItem="a59-02-kPu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yP8-yZ-dLf"/>
+                <constraint firstItem="a59-02-kPu" firstAttribute="top" secondItem="NhO-Dl-GPS" secondAttribute="bottom" id="zLc-gG-7Vd"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="77"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
