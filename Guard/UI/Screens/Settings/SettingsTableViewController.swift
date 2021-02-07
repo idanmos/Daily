@@ -136,8 +136,8 @@ class SettingsTableViewController: UITableViewController {
         
         
         // Locations
-        let isLocationAuthorized: Bool = LocationController.isAuthorized().0
-        let isLocationAuthorizedDescription = LocationController.isAuthorized().1
+        let isLocationAuthorized: Bool = LocationService.isAuthorized().0
+        let isLocationAuthorizedDescription = LocationService.isAuthorized().1
         
         if isLocationAuthorized {
             self.locationAuthrizationLabel.alpha = 0.5

@@ -1,5 +1,5 @@
 //
-//  LocationController.swift
+//  LocationService.swift
 //  Guard
 //
 //  Created by Idan Moshe on 19/08/2020.
@@ -10,11 +10,11 @@ import CoreLocation
 import CoreData
 import UIKit
 
-class LocationController: NSObject {
+class LocationService: NSObject {
     
     // MARK: - Public Variables
     
-    static let shared = LocationController()
+    static let shared = LocationService()
     
     // MARK: - Private Variables
     
@@ -56,24 +56,11 @@ class LocationController: NSObject {
         self.locationManager.stopMonitoringVisits()
     }
     
-    func significantLocationChangeMonitoringAvailable() -> Bool {
-        return CLLocationManager.significantLocationChangeMonitoringAvailable()
-    }
-    
-    func startMonitoringSignificantLocationChanges() {
-        guard self.significantLocationChangeMonitoringAvailable() else { return }
-        self.locationManager.startMonitoringSignificantLocationChanges()
-    }
-    
-    func stoppMonitoringSignificantLocationChanges() {
-        self.locationManager.stopMonitoringSignificantLocationChanges()
-    }
-    
 }
 
 // MARK: - CLLocationManagerDelegate
 
-extension LocationController: CLLocationManagerDelegate {
+extension LocationService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager,  didFailWithError error: Error) {
         if let error = error as? CLError, error.code == .denied {
@@ -105,7 +92,7 @@ extension LocationController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard UIApplication.shared.applicationState != .active else { return }
         
-        CoreDataController.save(locations)
+        PersistentStorage.save(locations)
         
         for location: CLLocation in locations {
             self.saveCoordinates(location.coordinate)
@@ -113,15 +100,15 @@ extension LocationController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
-        CoreDataController.save(visit)
+        PersistentStorage.save(visit)
         self.saveCoordinates(visit.coordinate)
     }
     
     func saveCoordinates(_ coordinate: CLLocationCoordinate2D) {
-        if !CoreDataController.isAddressExists(coordinate: coordinate) {
+        if !PersistentStorage.isAddressExists(coordinate: coordinate) {
             self.geocodeVisit(latitude: coordinate.latitude, longitude: coordinate.longitude) { (address: String?) in
                 if let address = address {
-                    CoreDataController.save(address: address, coordinate: coordinate)
+                    PersistentStorage.save(address: address, coordinate: coordinate)
                 }
             }
         }
@@ -134,7 +121,7 @@ extension LocationController: CLLocationManagerDelegate {
                 return
             }
             let address = "\(placemark.name ?? ""), \(placemark.locality ?? "")"
-            CoreDataController.save(address: address, coordinate: visit.coordinate)
+            PersistentStorage.save(address: address, coordinate: visit.coordinate)
             completionHandler()
         }
     }
@@ -158,7 +145,7 @@ extension LocationController: CLLocationManagerDelegate {
 
 // MARK: - Geocode coordinates to address
 
-extension LocationController {
+extension LocationService {
     
     func lookUpLocation(_ location: CLLocation, completionHandler: @escaping (CLPlacemark?) -> Void ) {
         let geocoder = CLGeocoder()

@@ -11,7 +11,7 @@ import FirebaseAnalytics
 
 class PlacesTableViewController: BaseTableViewController {
     
-    private let placesViewModel = PlacesViewModel()
+    private let viewModel = PlacesViewModel()
     
     private lazy var datePickerController: UIDatePickerViewController = {
         let picker = UIDatePickerViewController(nibName: String(describing: UIDatePickerViewController.self), bundle: nil)
@@ -27,7 +27,7 @@ class PlacesTableViewController: BaseTableViewController {
         
         self.tableView.register(UINib(nibName: LocationTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: LocationTableViewCell.identifier)
                 
-        self.placesViewModel.registerStartDateObserver { [weak self] (title: String) in
+        self.viewModel.registerStartDateObserver { [weak self] (title: String) in
             guard let self = self else { return }
             self.navigationItem.title = title
         }
@@ -38,7 +38,7 @@ class PlacesTableViewController: BaseTableViewController {
     // MARK: - General methods
     
     private func loadAndRefreshData() {
-        self.placesViewModel.fetchVisitsAndLocations()
+        self.viewModel.fetchData()
         
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -53,15 +53,15 @@ class PlacesTableViewController: BaseTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.placesViewModel.places.count
+        return self.viewModel.places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LocationTableViewCell.identifier, for: indexPath) as! LocationTableViewCell
         
-        if let visit = self.placesViewModel.places[indexPath.row] as? Visit {
+        if let visit = self.viewModel.places[indexPath.row] as? Visit {
             cell.configure(visit)
-        } else if let location = self.placesViewModel.places[indexPath.row] as? Location {
+        } else if let location = self.viewModel.places[indexPath.row] as? Location {
             cell.configure(location)
         }
         
@@ -95,9 +95,8 @@ extension PlacesTableViewController: UIDatePickerViewControllerDelegate {
     
     func datePickerController(_ picker: UIDatePickerViewController, didFinishPickingDate date: Date) {
         picker.dismiss(animated: true, completion: nil)
-        
-        self.placesViewModel.startDate = date
-        self.placesViewModel.fetchVisitsAndLocations()
+        self.viewModel.startDate = date
+        self.loadAndRefreshData()
     }
     
     func datePickerControllerDidCancel(_ picker: UIDatePickerViewController) {

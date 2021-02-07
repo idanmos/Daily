@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892F0709E0A797745FEBB8A0 /* Pods_Daily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352BC367DF5FC45E07B0A01B /* Pods_Daily.framework */; };
 		8A16A3E3251B119F003EC84C /* DailyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16A3E2251B119F003EC84C /* DailyMapViewController.swift */; };
 		8A16A3E8251B1E26003EC84C /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16A3E7251B1E26003EC84C /* VisitAnnotationView.swift */; };
 		8A16A3ED251B2029003EC84C /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16A3EC251B2029003EC84C /* VisitAnnotation.swift */; };
@@ -61,9 +62,10 @@
 		8AA4A85824ED52320029D279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4A85724ED52320029D279 /* Assets.xcassets */; };
 		8AA4A85B24ED52320029D279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4A85924ED52320029D279 /* LaunchScreen.storyboard */; };
 		8AA4A86324ED524D0029D279 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA4A86224ED524D0029D279 /* LocationController.swift */; };
+		8AB0E35E257A92CE00E5C1A3 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E35D257A92CE00E5C1A3 /* BackupService.swift */; };
 		8AB3AB23250756CB00C07EDB /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3AB22250756CA00C07EDB /* Workout.swift */; };
 		8AB3AB27250797C500C07EDB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3AB26250797C500C07EDB /* BaseTableViewController.swift */; };
-		8AB3AB3C2507CDCB00C07EDB /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3AB3B2507CDCB00C07EDB /* CoreDataController.swift */; };
+		8AB3AB3C2507CDCB00C07EDB /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3AB3B2507CDCB00C07EDB /* PersistentStorage.swift */; };
 		8AB3AB3E2507DADF00C07EDB /* WorkoutRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3AB3D2507DADF00C07EDB /* WorkoutRoute.swift */; };
 		8AD31B8C25013C600042A86F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD31B8B25013C600042A86F /* Activity.swift */; };
 		8AD62C2E250C12C000FED330 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD62C2D250C12C000FED330 /* Localization.swift */; };
@@ -83,9 +85,13 @@
 		8ADF246E2519FF6A002A6858 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF246D2519FF6A002A6858 /* UINavigationController+Extensions.swift */; };
 		8ADF2471251A1133002A6858 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF2470251A1133002A6858 /* UIApplication+Extensions.swift */; };
 		8ADF2479251A6336002A6858 /* CalendarPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF2478251A6336002A6858 /* CalendarPickerCoordinator.swift */; };
+		8AE593CB257966FE00B8E7A1 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE593C9257966FE00B8E7A1 /* PlaceTableViewCell.swift */; };
+		8AE593CC257966FE00B8E7A1 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE593CA257966FE00B8E7A1 /* PlaceTableViewCell.xib */; };
+		8AF65F30257A87AA00DEC2B5 /* app_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF65F2F257A87AA00DEC2B5 /* app_icon_57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352BC367DF5FC45E07B0A01B /* Pods_Daily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0F64A72559C8B500D6A33B /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		8A16A3E2251B119F003EC84C /* DailyMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMapViewController.swift; sourceTree = "<group>"; };
 		8A16A3E7251B1E26003EC84C /* VisitAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitAnnotationView.swift; sourceTree = "<group>"; };
@@ -144,9 +150,10 @@
 		8AA4A85A24ED52320029D279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AA4A85C24ED52320029D279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AA4A86224ED524D0029D279 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		8AB0E35D257A92CE00E5C1A3 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
 		8AB3AB22250756CA00C07EDB /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8AB3AB26250797C500C07EDB /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		8AB3AB3B2507CDCB00C07EDB /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		8AB3AB3B2507CDCB00C07EDB /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		8AB3AB3D2507DADF00C07EDB /* WorkoutRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRoute.swift; sourceTree = "<group>"; };
 		8AD31B8B25013C600042A86F /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		8AD62C2D250C12C000FED330 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -166,6 +173,11 @@
 		8ADF246D2519FF6A002A6858 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		8ADF2470251A1133002A6858 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		8ADF2478251A6336002A6858 /* CalendarPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerCoordinator.swift; sourceTree = "<group>"; };
+		8AE593C9257966FE00B8E7A1 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		8AE593CA257966FE00B8E7A1 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		8AF65F2F257A87AA00DEC2B5 /* app_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_57.png; path = Assets.xcassets/AppIcon.appiconset/app_icon_57.png; sourceTree = "<group>"; };
+		C081C43C02C113698D9947E6 /* Pods-Daily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily.debug.xcconfig"; path = "Target Support Files/Pods-Daily/Pods-Daily.debug.xcconfig"; sourceTree = "<group>"; };
+		F22039A09B025812F13B7FBE /* Pods-Daily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily.release.xcconfig"; path = "Target Support Files/Pods-Daily/Pods-Daily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +187,7 @@
 			files = (
 				8A5E5EC224F513D900298919 /* MapKit.framework in Frameworks */,
 				8A9E4E1B2504464C00E1ED74 /* HealthKit.framework in Frameworks */,
+				892F0709E0A797745FEBB8A0 /* Pods_Daily.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +197,8 @@
 		5516BE33099B17A8EFB75754 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C081C43C02C113698D9947E6 /* Pods-Daily.debug.xcconfig */,
+				F22039A09B025812F13B7FBE /* Pods-Daily.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -221,6 +236,7 @@
 			children = (
 				8A9E4E1A2504464C00E1ED74 /* HealthKit.framework */,
 				8A5E5EC124F513D900298919 /* MapKit.framework */,
+				352BC367DF5FC45E07B0A01B /* Pods_Daily.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +264,8 @@
 			children = (
 				8A9362A8257218E500BA2D3E /* PlacesTableViewController.swift */,
 				8A9362AE257218FB00BA2D3E /* PlacesViewModel.swift */,
+				8AE593C9257966FE00B8E7A1 /* PlaceTableViewCell.swift */,
+				8AE593CA257966FE00B8E7A1 /* PlaceTableViewCell.xib */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -355,6 +373,7 @@
 				8A9E4E412506BCC600E1ED74 /* Extensions */,
 				8A9E4E0C25029F9C00E1ED74 /* Logger.swift */,
 				8AA4A85724ED52320029D279 /* Assets.xcassets */,
+				8AF65F2F257A87AA00DEC2B5 /* app_icon_57.png */,
 				8AA4A85924ED52320029D279 /* LaunchScreen.storyboard */,
 				8AA4A85C24ED52320029D279 /* Info.plist */,
 				8A5D46E925614D2200354953 /* GoogleService-Info.plist */,
@@ -369,7 +388,8 @@
 				8A9E4E18250425EE00E1ED74 /* MapUtils.swift */,
 				8A9E4E0A2502150800E1ED74 /* UniversalConverter.swift */,
 				8A9E4E1C2504467700E1ED74 /* HealthProfileDataStore.swift */,
-				8AB3AB3B2507CDCB00C07EDB /* CoreDataController.swift */,
+				8AB3AB3B2507CDCB00C07EDB /* PersistentStorage.swift */,
+				8AB0E35D257A92CE00E5C1A3 /* BackupService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -522,10 +542,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AA4A85F24ED52320029D279 /* Build configuration list for PBXNativeTarget "Daily" */;
 			buildPhases = (
+				C12B7C9CF2363DEBD6A775F4 /* [CP] Check Pods Manifest.lock */,
 				D0238778CC61E4A003990F54 /* [CP] Prepare Artifacts */,
 				8AA4A84424ED522F0029D279 /* Sources */,
 				8AA4A84524ED522F0029D279 /* Frameworks */,
 				8AA4A84624ED522F0029D279 /* Resources */,
+				03CB8BDF56223E57F3EF7C1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,11 +601,13 @@
 				8A9E4E2325044D8500E1ED74 /* SleepAnalysisTableViewCell.xib in Resources */,
 				8A64DD092509068F00F5BAED /* ActivitySectionHeaderView.xib in Resources */,
 				8A2AD9512572C888001758C5 /* UIDatePickerViewController.xib in Resources */,
+				8AE593CC257966FE00B8E7A1 /* PlaceTableViewCell.xib in Resources */,
 				8A9E4E132503CBDC00E1ED74 /* ActivityTableViewCell.xib in Resources */,
 				8A5D46EA25614D2200354953 /* GoogleService-Info.plist in Resources */,
 				8ADB7FA325124721007737EC /* WorkoutTableViewCell.xib in Resources */,
 				8A83474024FF9BCD00FBBE70 /* Main.storyboard in Resources */,
 				8AA4A85824ED52320029D279 /* Assets.xcassets in Resources */,
+				8AF65F30257A87AA00DEC2B5 /* app_icon_57.png in Resources */,
 				8AD62C33250E863D00FED330 /* Tutorial.storyboard in Resources */,
 				8A87DD28250FE8C300E16DE8 /* ShortActivitySummaryView.xib in Resources */,
 			);
@@ -592,6 +616,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03CB8BDF56223E57F3EF7C1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daily/Pods-Daily-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daily/Pods-Daily-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daily/Pods-Daily-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12B7C9CF2363DEBD6A775F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daily-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0238778CC61E4A003990F54 /* [CP] Prepare Artifacts */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,6 +682,7 @@
 				8AD62C42250F602F00FED330 /* PreferenceManager.swift in Sources */,
 				8A9E4E122503CBDC00E1ED74 /* ActivityTableViewCell.swift in Sources */,
 				8A622E69251D3D830041FAFD /* BaseNibViewController.swift in Sources */,
+				8AB0E35E257A92CE00E5C1A3 /* BackupService.swift in Sources */,
 				8AD62C40250E9B8D00FED330 /* TutorialPermissionsViewController.swift in Sources */,
 				8A64DD062509067B00F5BAED /* ActivitySectionHeaderView.swift in Sources */,
 				8A30EF8B2516BCC10007D5DF /* BaseCoordinatorViewController.swift in Sources */,
@@ -647,13 +711,14 @@
 				8A64DD032508D9C500F5BAED /* BaseViewController.swift in Sources */,
 				8A9362A9257218E500BA2D3E /* PlacesTableViewController.swift in Sources */,
 				8A99CA652574100A0041FD51 /* ActivitiesViewModel.swift in Sources */,
-				8AB3AB3C2507CDCB00C07EDB /* CoreDataController.swift in Sources */,
+				8AB3AB3C2507CDCB00C07EDB /* PersistentStorage.swift in Sources */,
 				8A9E4E0D25029F9C00E1ED74 /* Logger.swift in Sources */,
 				8ADB7FA225124721007737EC /* WorkoutTableViewCell.swift in Sources */,
 				8A87DD26250FE8BA00E16DE8 /* ShortActivitySummaryView.swift in Sources */,
 				8A9E4E252504EFA400E1ED74 /* UIView+Extension.swift in Sources */,
 				8A9E4E462506C24800E1ED74 /* UIViewConstraintsExtension.swift in Sources */,
 				8A4F89402575173A0073A197 /* UITableView+Extension.swift in Sources */,
+				8AE593CB257966FE00B8E7A1 /* PlaceTableViewCell.swift in Sources */,
 				8A16A3F0251B213A003EC84C /* WorkoutAnnotation.swift in Sources */,
 				8AD62C3A250E969700FED330 /* LocationPermissionViewController.swift in Sources */,
 				8A622E66251D3D2E0041FAFD /* UIViewController+Extensions.swift in Sources */,
@@ -819,6 +884,7 @@
 		};
 		8AA4A86024ED52320029D279 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C081C43C02C113698D9947E6 /* Pods-Daily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Guard/Guard.entitlements;
@@ -847,6 +913,7 @@
 		};
 		8AA4A86124ED52320029D279 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F22039A09B025812F13B7FBE /* Pods-Daily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Guard/Guard.entitlements;

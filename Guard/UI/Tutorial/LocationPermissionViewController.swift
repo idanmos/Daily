@@ -33,8 +33,8 @@ class LocationPermissionViewController: BaseCoordinatorViewController {
     */
     
     @IBAction func onPressRequestPermissions(_ sender: Any) {
-        LocationController.shared.startUpdatingLocation()
-        LocationController.shared.startMonitoringVisits()
+        LocationService.shared.startUpdatingLocation()
+        LocationService.shared.startMonitoringVisits()
     }
 
 }

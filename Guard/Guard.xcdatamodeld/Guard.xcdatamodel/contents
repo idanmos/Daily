@@ -17,6 +17,7 @@
         <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="speed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="speedAccuracy" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tag" attributeType="String"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="verticalAccuracy" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
@@ -30,7 +31,7 @@
     </entity>
     <elements>
         <element name="Address" positionX="-63" positionY="36" width="128" height="74"/>
-        <element name="Location" positionX="-63" positionY="36" width="128" height="224"/>
+        <element name="Location" positionX="-63" positionY="36" width="128" height="239"/>
         <element name="Visit" positionX="-63" positionY="-18" width="128" height="119"/>
     </elements>
 </model>

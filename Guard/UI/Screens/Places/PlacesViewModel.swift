@@ -38,8 +38,8 @@ class PlacesViewModel {
         completionHandler(self.startDate.getTitle())
     }
     
-    func fetchVisitsAndLocations() {
-        let filteredPlaces: [Any] = CoreDataController.fetchVisitsAndLocations(fetchLimit: 50).filter { (obj: Any) -> Bool in
+    func fetchData() {
+        let filteredPlaces: [Any] = PersistentStorage.fetchVisitsAndLocations(fetchLimit: 50).filter { (obj: Any) -> Bool in
             if obj is Visit {
                 if let date: Date = (obj as! Visit).arrivalDate {
                     return Calendar.current.isDate(date, inSameDayAs: self.startDate)

@@ -28,7 +28,7 @@ class MapViewModel {
     }
     
     func fetchVisitsAndLocations() {
-        let filteredPlaces: [Any] = CoreDataController.fetchVisitsAndLocations(fetchLimit: 50).filter { (obj: Any) -> Bool in
+        let filteredPlaces: [Any] = PersistentStorage.fetchVisitsAndLocations(fetchLimit: 50).filter { (obj: Any) -> Bool in
             if obj is Visit {
                 if let date: Date = (obj as! Visit).arrivalDate {
                     return Calendar.current.isDate(date, inSameDayAs: self.timestamp)
@@ -65,7 +65,7 @@ class MapViewModel {
             annotation.title = "Place"
             annotation.subtitle = "\(self.dateFormatter.string(from: significantLocation.timestamp!))"
             
-            if let address: String = CoreDataController.getAddress(from: CLLocationCoordinate2D(latitude: significantLocation.latitude, longitude: significantLocation.longitude)) {
+            if let address: String = PersistentStorage.getAddress(from: CLLocationCoordinate2D(latitude: significantLocation.latitude, longitude: significantLocation.longitude)) {
                 annotation.title = address
             }
             
@@ -80,7 +80,7 @@ class MapViewModel {
                 
                 annotation.subtitle = "\(self.dateFormatter.string(from: arrivalDate))"
                 
-                if let address: String = CoreDataController.getAddress(from: CLLocationCoordinate2D(latitude: visit.latitude, longitude: visit.longitude)) {
+                if let address: String = PersistentStorage.getAddress(from: CLLocationCoordinate2D(latitude: visit.latitude, longitude: visit.longitude)) {
                     annotation.title = address
                 }
                 

@@ -6,6 +6,29 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Daily</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>app_icon_57.png</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Places backup</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.idanmoshe.Guard.placesBackup</string>
+			</array>
+		</dict>
+		<dict>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,6 +41,21 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>app_icon_57</string>
+			<key>CFBundleURLName</key>
+			<string>com.idanmoshe.daily</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>daily</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
@@ -55,5 +93,68 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>app_icon_57.png</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Places backup</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>com.idanmoshe.Guard.placesBackup</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>dailyApp</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeTagSpecification</key>
+			<dict/>
+		</dict>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>app_icon_57.png</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Places backup</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>com.idanmoshe.Guard.placesBackup</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>dailyApp</string>
+				</array>
+			</dict>
+		</dict>
+		<dict/>
+	</array>
 </dict>
 </plist>

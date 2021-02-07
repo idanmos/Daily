@@ -35,8 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PreferenceManager.isTutorialCompleted  {            
             if PreferenceManager.isVisitsEnabled {
-                LocationController.shared.startMonitoringVisits()
-                LocationController.shared.startMonitoringSignificantLocationChanges()
+                LocationService.shared.startMonitoringVisits()
             }
             
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -61,8 +60,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // com.apple.UIKit.activity.Mail
+        /*
+        let places: [[String: Any]] = PersistentStorage.exportAll()
+        guard let filePath: String = BackupService.shared.save(value: places, fileName: "places") else {
+            debugPrint("Failed to export \(places.count) places")
+            return
+        }
+        
+        debugPrint("Successfully export \(places.count) places to: \(filePath)")
+        
+        guard let window: UIWindow = self.window, let rootViewController = window.rootViewController else { return }
+        let url = URL(fileURLWithPath: filePath)
+        
+        rootViewController.openShareViewController(activityItems: [url]) { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, activityError: Error?) in
+            debugPrint("")
+        }
+ */
+    }
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         self.saveContext()
+        
+        /* do {
+            try PersistentStorage.importFromPlist(fileName: "places",
+                                                   entityName: "Location",
+                                                   context: self.managedObjectContext())
+        } catch let error {
+            debugPrint(error)
+        } */
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -122,3 +149,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate {
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return PersistentStorage.application(app, open: url, options: options)
+    }
+    
+}

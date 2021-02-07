@@ -54,7 +54,7 @@ class LocationTableViewCell: UITableViewCell {
             self.accuracyLabel.text = MapUtils.formatDistance(distance: location.horizontalAccuracy)
         }
         
-        if let address: String = CoreDataController.getAddress(from: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
+        if let address: String = PersistentStorage.getAddress(from: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
             self.locationLabel.text = address
         } else {
             self.locationLabel.text = "\(location.latitude), \(location.longitude)"
@@ -85,7 +85,7 @@ class LocationTableViewCell: UITableViewCell {
             self.accuracyLabel.text = MapUtils.formatDistance(distance: visit.horizontalAccuracy)
         }
         
-        if let address: String = CoreDataController.getAddress(from: CLLocationCoordinate2D(latitude: visit.latitude, longitude: visit.longitude)) {
+        if let address: String = PersistentStorage.getAddress(from: CLLocationCoordinate2D(latitude: visit.latitude, longitude: visit.longitude)) {
             self.locationLabel.text = address
         } else {
             self.locationLabel.text = "\(visit.latitude), \(visit.longitude)"
